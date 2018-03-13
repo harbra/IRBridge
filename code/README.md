@@ -18,6 +18,7 @@ All code was developed in PlatformIO. After pulling the repository from GitHub, 
 * Adjust `lib_dir` and `lib_extra_dirs` in `/esp8266/platformio.ini` according to your local file setup.
 * Library and development dependencies for the webinterface need to be installed with `npm install` (this requires Node.js on your development machine). This pulls all required dependencies as specified in `/web/package.json`.
 * If changes on the webinterface have been done, use `npm run build` to package the files. The output is generated in `/web/dist/`. Copy the contents of this folder to `/esp8266/data/html/dist`.
+* For uploading to the IRBridge, connect a USB-to-serial-converter to the respective pins on the PCB. When the MicroUSB port points to the left (9 o'clock), they are from left to right: NC, TX, RX, NC, NC, GND.
 * To upload changes in the file contents in `/esp8266/data` to the ESP8266's SPIFFS, use the PlatformIO "other target" `PIO Upload SPIFFS image`
 * To upload changes of the general ESP8266 code, use the standard build target `PIO build` (doesn't overwrite SPIFFS file system)
 * To save time during development and avoid repeated uploads to the SPIFFS memory (because they take time), connect the ESP8266 to the same Wifi network as your development machine and  uncomment the `baseURL` parameter in `/web/src/plugins/axios.js`. Set the `baseURL` to the ESP's IP address. Then use `npm run dev` to fire up a local development server. All API-calls to the ESP should still be answered by the ESP, however the webinterface will be served locally.

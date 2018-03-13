@@ -122,6 +122,7 @@ This vue.js file is the main settings page for backing up and restoring settings
 <script>
 import Vue from 'vue'
 import {HTTP} from '../plugins/axios'
+import WebEvents from '../plugins/webevents'
 
 export default {
   name: 'SettingsBackupRestore',

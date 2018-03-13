@@ -242,7 +242,7 @@ String WebController::getContentType(String filename)
         else if(filename.endsWith(".xml")) return "text/xml";
         else if(filename.endsWith(".pdf")) return "application/x-pdf";
         else if(filename.endsWith(".zip")) return "application/x-zip";
-        else if(filename.endsWith(".gz")) return "application/x-gzip";
+        else if(filename.endsWith(".gz")) return "application/gzip";
         return "text/plain";
 }
 
@@ -595,13 +595,16 @@ bool WebController::handleFileRead(AsyncWebServerRequest *request, String path)
         if(SPIFFS.exists(pathWithGz) || SPIFFS.exists(path)) {
                 if(SPIFFS.exists(pathWithGz))
                         path += ".gz";
+
                 myLogger.addToLog("serving: ", path);
 
-                request->send(SPIFFS, path, contentType);
-                //File file = SPIFFS.open(path, "r");
+                AsyncWebServerResponse *response = request->beginResponse(SPIFFS, path, contentType);
 
-                //size_t sent = request->streamFile(file, contentType);
-                //file.close();
+                if(SPIFFS.exists(pathWithGz)) {
+                  response->addHeader("Content-Encoding", "gzip");
+                }
+
+                request->send(response);
 
                 return true;
         }

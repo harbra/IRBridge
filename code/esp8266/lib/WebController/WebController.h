@@ -51,7 +51,6 @@ extern "C" {
 #include "libb64/cdecode.h"
 }
 
-#include <ESP8266mDNS.h>
 #include <DNSServer.h>
 #include <FS.h>
 #include <Logger.h>
