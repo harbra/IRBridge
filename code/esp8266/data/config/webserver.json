@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "ap": {
+      "ssid": ["IRBridge"],
+      "pwd": ["0123456789", false]
+    },
+    "sta": {
+      "ssid": [""],
+      "pwd": ["", false],
+      "enc": [7],
+      "dhcp": [true],
+      "ip": [null],
+      "gw": [null],
+      "sn": [null]
+    }
+  }
+}

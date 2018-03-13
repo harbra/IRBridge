@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'flipfont';
+  src:
+    url('fonts/flipfont.ttf?shv8x7') format('truetype'),
+    url('fonts/flipfont.woff?shv8x7') format('woff'),
+    url('fonts/flipfont.svg?shv8x7#flipfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'flipfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-plus:before {
+  content: "\f067";
+}
+.icon-minus:before {
+  content: "\f068";
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-download:before {
+  content: "\f019";
+}
+.icon-repeat:before {
+  content: "\f01e";
+}
+.icon-rotate-right:before {
+  content: "\f01e";
+}
+.icon-exclamation-triangle:before {
+  content: "\f071";
+}
+.icon-warning:before {
+  content: "\f071";
+}
+.icon-upload:before {
+  content: "\f093";
+}
+.icon-send:before {
+  content: "\f09e";
+}
+.icon-save:before {
+  content: "\f0c7";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-spinner:before {
+  content: "\f110";
+}
+.icon-folder-open-o:before {
+  content: "\f115";
+}
+.icon-wifi-0:before {
+  content: "\e900";
+}
+.icon-wifi-1:before {
+  content: "\e901";
+}
+.icon-wifi-2:before {
+  content: "\e902";
+}
+.icon-wifi-3:before {
+  content: "\e903";
+}
+.icon-wifi-4:before {
+  content: "\e904";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-gear:before {
+  content: "\f013";
+}
+.icon-lock:before {
+  content: "\f023";
+}
+.icon-plus-circle:before {
+  content: "\f055";
+}
+.icon-times-circle:before {
+  content: "\f057";
+}
+.icon-eye:before {
+  content: "\f06e";
+}
+.icon-eye-slash:before {
+  content: "\f070";
+}
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+.icon-wifi:before {
+  content: "\f1eb";
+}
