@@ -53,7 +53,7 @@ void IRBridge::setup()
     controller.addServerHandler("/api/devices",HTTP_DELETE,std::bind(&IRBridge::handleDeleteDevice, this, std::placeholders::_1, std::placeholders::_2));
     controller.addServerHandler("/api/devices",HTTP_PUT,std::bind(&IRBridge::handleEditDevice, this, std::placeholders::_1, std::placeholders::_2));
 
-    controller.addServerHandler("/api/sendir",HTTP_GET,std::bind(&IRBridge::handleSendIR, this, std::placeholders::_1));
+    controller.addServerHandler("/api/sendir",HTTP_GET,std::bind(&IRBridge::handleSendIR, this, std::placeholders::_1),false,false);
 
     irrecv.enableIRIn();
 
